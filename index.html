@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Form Submission</title>
+    <!-- The <title> tag sets the title of the webpage, seen in the browser tab -->
+</head>
+<body>
+    <!-- The <h2> tag creates a level 2 heading for the form -->
+    <h2>Sample Form</h2>
+
+    <!-- The <form> tag encapsulates all the input fields and buttons. 
+         The 'action' attribute specifies where to send form data when submitted.
+         The 'method' attribute specifies the HTTP method (get or post) used when submitting the form. -->
+    <form action="/submit-your-form" method="post">
+        
+        <!-- Input Field for 'Name':
+             - The <label> tag defines a label for the input element.
+             - 'for' attribute in <label> tag should match 'id' of <input> tag for better accessibility.
+             - The <input> tag with type 'text' allows users to enter text.
+             - 'id' attribute provides a unique identifier for the input, while 'name' is used as the key in the submitted data. -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <!-- Input Field for 'Email':
+             - <input> type 'email' is used for email address inputs.
+             - Browsers will validate the input to ensure it matches email format. -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <!-- Input Field for 'Date of Birth':
+             - <input> type 'date' allows users to select a date from a calendar. -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <!-- Radio Buttons for 'Gender':
+             - Radio buttons allow selection of a single option from a set.
+             - All radio buttons in a group should have the same 'name' attribute. -->
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <!-- Dropdown Menu for 'Country':
+             - The <select> tag creates a dropdown list.
+             - The <option> tags inside <select> define the available options. -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+        </select><br><br>
+
+        <!-- Textarea for 'Message':
+             - <textarea> is used for multi-line text input. -->
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Submit Button:
+             - <input> type 'submit' sends the form data to the server. -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
